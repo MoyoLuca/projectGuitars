@@ -1,0 +1,9 @@
+$step: 1;
+
+@for $index from 1 through 120 {
+   
+    .f-#{$step} {
+        font-size: #{$step}px !important;
+    }
+    $step: $step + 1;
+}

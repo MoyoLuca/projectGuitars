@@ -1,0 +1,27 @@
+*{
+    --color: #fc3838!important;
+    --background-color: #000;
+    --font-family: 'Roboto', sans-serif;
+}
+
+.btn {
+    background-color: var(--background-color);
+    color: #FFF;
+    padding: 1rem;
+    border: none;
+    transition: transform 0.1s; 
+    font-size: 15px;
+    font-family: var(--font-family);
+    border-radius: 8px;
+    border: none;
+    
+}
+
+.btn:active{
+ transform: scale(0.92);
+}
+
+.btn:hover{
+    border: 2px solid rgba(var(--background-color), 0.25);
+    cursor: pointer;
+}

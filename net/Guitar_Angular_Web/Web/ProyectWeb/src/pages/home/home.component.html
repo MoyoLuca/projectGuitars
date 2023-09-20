@@ -1,0 +1,42 @@
+<!-- <ui-button [(text)]="textInput" (onClick)="showAlert()"></ui-button> -->
+
+<!-- 
+<button tuiButton [appearance]="'primary'">
+  {{ textInput }}
+</button>
+<form [formGroup]="formGroup">
+  <tui-input formControlName="textInput">
+    Escribe un valor
+    <input tuiTextfield type="text" />
+  </tui-input>
+</form> -->
+
+<!-- <span class="material-symbols-outlined"> light_mode </span> -->
+
+<grid
+  [gap]="[8, 32]"
+  [padding]="'1rem'"
+  [templateColumn]="'1fr 1fr 1fr'"
+  class="shadow-1"
+>
+  <button (click)="toggleShow()" tuiButton [size]="'s'" class="w-content">
+    <grid [gap]="[16, 8]" [mode]="'flex'" [direction]="'left-center'">
+      <span class="material-symbols-outlined f-16"> search </span>
+      <span class="f-14">Buscar </span>
+    </grid>
+  </button>
+  <span [routerLink]="'/contact'" (click)="navigate()"> Contacts </span>
+  <span> hijo3 </span>
+</grid>
+
+<grid>
+  <ng-container *ngFor="let name of arrayNomrbres; let i = index">
+    <span *ngIf="showOrHide && i > 0">
+      {{ name }}
+    </span>
+  </ng-container>
+
+  <span *ngFor="let name of arrayObjetos">
+    {{ name.Name }}
+  </span>
+</grid>

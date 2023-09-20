@@ -14,20 +14,33 @@
     "declaration": false,
     "downlevelIteration": true,
     "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "strictNullChecks": false,
     "moduleResolution": "node",
+    "removeComments": true,
     "importHelpers": true,
+    "resolveJsonModule": false,
+    "allowSyntheticDefaultImports": true,
     "target": "ES2022",
     "module": "ES2022",
-    "useDefineForClassFields": false,
-    "lib": [
-      "ES2022",
-      "dom"
-    ]
+    "useDefineForClassFields": false,
+    "lib": ["ES2022","dom"],
+    "paths": {
+      "@ui/*": ["src/ui/*"],
+      "@basic/*": ["src/services/common/basic/*"],
+      "@common/*": ["src/services/common/common/*"],
+      "@guitangweb/*": ["src/services/guitar.angular.web/*"]
+   }
   },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,
-    "strictInjectionParameters": true,
+    "strictInjectionParameters": false,
     "strictInputAccessModifiers": true,
-    "strictTemplates": true
-  }
+    "strictTemplates": true,
+    "strictNullChecks": false,
+    "optimization": false,
+    "aot": false,
+    "buildOptimizer": false
+  }
 }
+
